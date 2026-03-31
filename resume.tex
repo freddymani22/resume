@@ -25,7 +25,7 @@
   right=0.6in
 }
 
-\linespread{1.05}
+\linespread{1.0}
 
 % Suppress page numbers and header/footer
 \pagestyle{empty}
@@ -61,7 +61,7 @@
 
 \newcommand{\resumeListStart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\resumeListEnd}{\end{itemize}\vspace{-4pt}}
-\newcommand{\bulletListStart}{\begin{itemize}[leftmargin=0.2in, itemsep=1pt, topsep=2pt]}
+\newcommand{\bulletListStart}{\begin{itemize}[leftmargin=0.2in, itemsep=0pt, topsep=1pt]}
 \newcommand{\bulletListEnd}{\end{itemize}\vspace{2pt}}
 
 % Nested project entry within Work Experience
@@ -117,7 +117,8 @@ Self-taught backend, distributed systems, and embedded engineer with 2+ years of
     {Full Stack Engineer / Data Infrastructure Engineer}{Mysore, India}
   \bulletListStart
     \resumeItem{Single-handedly owned 4 production systems end-to-end across distributed data infrastructure, IoT, embedded, and full-stack web: \textbf{50-node self-hosted scraping cluster} (5.3M+ records, 99.9\% uptime, \$24K+ savings), IoT platform live on App Stores, ESP32 measurement system under \textbf{India Post} evaluation, and GPS tracking platform live in production}
-    \resumeItem{Infrastructure recognized with \textbf{500K+ views and 1,500+ shares} across \href{https://www.reddit.com/r/selfhosted/comments/1rsflyj/fully_selfhosted_distributed_scraping/}{Reddit (r/selfhosted}, \href{https://www.reddit.com/r/webscraping/comments/1rqsvgp/python_selenium_at_scale_50_nodes_39m_records/}{r/webscraping)}; \textbf{75\% cost reduction} (\$68/month vs. \$1,760/month AWS equivalent); \textbf{undetected for 2+ years} at 50-node scale; \textbf{95\% reduction in manual intervention} through automated self-healing}
+    \resumeItem{\textbf{75\% cost reduction} (\$68/month vs. \$1,760/month AWS equivalent); \textbf{undetected for 2+ years} at 50-node scale; \textbf{95\% reduction in manual intervention} through automated self-healing}
+    \resumeItem{Infrastructure recognized with \textbf{500K+ views and 1,500+ shares} across \href{https://www.reddit.com/r/selfhosted/comments/1rsflyj/fully_selfhosted_distributed_scraping/}{Reddit (r/selfhosted}, \href{https://www.reddit.com/r/webscraping/comments/1rqsvgp/python_selenium_at_scale_50_nodes_39m_records/}{r/webscraping)}}
   \bulletListEnd
 
   \vspace{2pt}
@@ -127,8 +128,10 @@ Self-taught backend, distributed systems, and embedded engineer with 2+ years of
   \projectEntry{Kalibre.ai -- Production Distributed Data Platform (End-to-End Ownership)}{\href{https://kalibre.ai}{kalibre.ai}}
   \bulletListStart
     \resumeItem{\textbf{Anti-detection}: chose physical RPi nodes over containers -- each Pi has genuinely distinct GPU info, WebGL renderer, canvas fingerprint, and hardware clock (containers share identical underlying signals regardless of network isolation); \textbf{dedicated VPN per node} with auto IP self-assignment on boot, \textbf{CDP-level user-agent override} (Network.setUserAgentOverride), navigator.webdriver spoofing, XPath by text content (survived multiple full site redesigns) -- \textbf{undetected for 2+ years}}
-    \resumeItem{\textbf{DB-as-coordinator}: job unique IDs as primary keys eliminate duplicates across 50 nodes with zero central queue; \textbf{Supabase boolean-flip cycle management} ensures each target is processed by exactly one node per cycle; self-hosted on Synology NAS; scaled 1M+ $\rightarrow$ \textbf{5.3M+ continuously refreshed records} (\$30,462 cumulative savings); \textbf{LLM parsing pipeline} (Mistral AI agent + GPT-4o-mini + DeepSeek) classifies scraped jobs into roles, extracts experience, skills, and work type from raw HTML; spaCy entity ruler for skill normalization}
-    \resumeItem{\textbf{Resilience}: HTTP 429 auto-retry (5 attempts), 3-tier modal dismissal (button $\rightarrow$ ESC $\rightarrow$ JS CSS force-hide), new-tab isolation per job, IoT smart power strip auto power-cycles crashed nodes; \textbf{dedicated expiry-checker nodes} flag stale listings (\textbf{3,700+ checks/day}); custom real-time dashboard with per-node health indicators}
+    \resumeItem{\textbf{DB-as-coordinator}: job unique IDs as primary keys eliminate duplicates across 50 nodes with zero central queue; \textbf{Supabase boolean-flip cycle management} ensures each target is processed by exactly one node per cycle; self-hosted on Synology NAS; scaled 1M+ $\rightarrow$ \textbf{5.3M+ continuously refreshed records} (\$30,462 cumulative savings)}
+    \resumeItem{\textbf{LLM parsing pipeline}: Mistral AI agent + GPT-4o-mini + DeepSeek classifies scraped jobs into roles, extracts experience, skills, and work type from raw HTML; spaCy entity ruler for skill normalization}
+    \resumeItem{\textbf{Resilience}: HTTP 429 auto-retry (5 attempts); 3-tier modal dismissal (button $\rightarrow$ ESC $\rightarrow$ JS CSS force-hide); new-tab isolation per job; IoT smart power strip auto power-cycles crashed nodes}
+    \resumeItem{\textbf{Monitoring}: dedicated expiry-checker nodes flag stale listings (\textbf{3,700+ checks/day}); custom real-time dashboard with per-node health indicators}
     \resumeItem{\textbf{Tech:} Python, Selenium, CDP, BeautifulSoup, Scrapy, spaCy, Mistral AI, OpenAI, DeepSeek, PostgreSQL, Supabase, Docker, Nginx, Raspberry Pi, VPN}
   \bulletListEnd
 
@@ -140,7 +143,8 @@ Self-taught backend, distributed systems, and embedded engineer with 2+ years of
 
   \projectEntry{4D Scale -- Automated Parcel Measurement System (End-to-End Ownership)}{India Post -- 25K units under evaluation}
   \bulletListStart
-    \resumeItem{Single-handedly built dual-microcontroller system (hardware, firmware, CV pipeline, backend, dashboard, calibration tooling); demonstrated to \textbf{India Post} (150,000+ post offices) -- \textbf{25,000-unit deployment under evaluation}; captures L/W/H/Weight simultaneously with sub-mm precision}
+    \resumeItem{Single-handedly built dual-microcontroller system (hardware, firmware, CV pipeline, backend, dashboard, calibration tooling)}
+    \resumeItem{Demonstrated to \textbf{India Post} (150,000+ post offices) -- \textbf{25,000-unit deployment under evaluation}; captures L/W/H/Weight simultaneously with sub-mm precision}
     \resumeItem{Full \textbf{CV pipeline} on constrained hardware: Sobel $\rightarrow$ dilation $\rightarrow$ Moore contour $\rightarrow$ Graham hull $\rightarrow$ rotating calipers min-area rect; ultrasonic height with perspective-correction scaling; load cell with 5-sample median filtering; \textbf{ESP-IDF v5.5/FreeRTOS} firmware + \textbf{Flask} backend with server-side calibration API (zero reflash)}
     \resumeItem{\textbf{Tech:} ESP32, ESP-IDF v5.5, FreeRTOS, C, OpenCV, Flask, Python, HTML/JS}
   \bulletListEnd
@@ -148,7 +152,8 @@ Self-taught backend, distributed systems, and embedded engineer with 2+ years of
   \projectEntry{AI Footfall Counter -- Overhead People Counting System}{Hailo-8 NPU, 13 TOPS}
   \bulletListStart
     \resumeItem{Full edge inference pipeline on Raspberry Pi + \textbf{Hailo-8 NPU}: \textbf{DamoYOLO} overhead head detection (640×640, int8-quantized) $\rightarrow$ \textbf{ByteTracker} with Kalman filtering for multi-person tracking $\rightarrow$ IN/OUT zone-crossing detection with trajectory analysis -- \textbf{$\sim$20 FPS} on constrained hardware, no cloud dependency}
-    \resumeItem{Django API integration pushing per-device IN/OUT/passerby counts with 7-day local persistence; optional gender classification and RTMP live streaming via FFmpeg; real-time diagnostics monitor with per-frame stats}
+    \resumeItem{Django API integration pushing per-device IN/OUT/passerby counts with 7-day local persistence}
+    \resumeItem{Optional gender classification and RTMP live streaming via FFmpeg; real-time diagnostics monitor with per-frame stats}
     \resumeItem{\textbf{Tech:} Python, DeGirum, DamoYOLO, ByteTracker, OpenCV, Picamera2, Raspberry Pi, Hailo-8}
   \bulletListEnd
 
