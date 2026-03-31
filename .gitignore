@@ -1,0 +1,23 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.idx
+*.ind
+*.lof
+*.lot
+*.lol
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.xdv
+
+# Compiled PDF (optional -- remove this line if you want to track the PDF)
+*.pdf

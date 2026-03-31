@@ -1,0 +1,205 @@
+%------------------------------------------
+% ATS-Optimized Resume -- Freddy M
+% Single-column, no tables, no icons,
+% no header/footer content, plain text safe
+%------------------------------------------
+
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{needspace}
+
+\geometry{
+  top=0.5in,
+  bottom=0.5in,
+  left=0.6in,
+  right=0.6in
+}
+
+\linespread{1.05}
+
+% Suppress page numbers and header/footer
+\pagestyle{empty}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting -- ALL CAPS, full-width rule
+\titleformat{\section}{
+  \vspace{2pt}\bfseries\raggedright\normalsize
+}{}{0em}{\MakeUppercase}[\color{black}\titlerule\vspace{-2pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1\vspace{1pt}}
+}
+
+\newcommand{\resumeRole}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} -- \textit{#3} & \textbf{#2}\\
+      \small #4 &  \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProject}[2]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\bulletListStart}{\begin{itemize}[leftmargin=0.2in, itemsep=1pt, topsep=2pt]}
+\newcommand{\bulletListEnd}{\end{itemize}\vspace{2pt}}
+
+% Nested project entry within Work Experience
+\newcommand{\projectEntry}[2]{
+  \needspace{4\baselineskip}
+  \vspace{4pt}
+  {\small\textbf{#1}} \hfill {\small\textit{#2}}\\[-6pt]
+}
+
+%------------------------------------------
+\begin{document}
+
+%-------------- CONTACT INFO --------------
+% Must be in document body -- not header/footer
+\begin{center}
+  {\LARGE \textbf{FREDDY M}}\\[2pt]
+  {\small Backend Engineer \textbar\ Distributed Systems \& IoT}\\[2pt]
+  Bangalore, Karnataka\\[2pt]
+  \href{mailto:freddymani.fm@gmail.com}{freddymani.fm@gmail.com} \quad
+  +91 7795295465 \quad
+  \href{https://www.linkedin.com/in/freddy-mani-14b9a9143/}{linkedin.com/in/freddy-mani-14b9a9143} \quad
+  \href{https://github.com/freddymani22}{github.com/freddymani22}
+\end{center}
+
+%-------------- PROFESSIONAL SUMMARY ------
+\section{Professional Summary}
+
+\small{
+Self-taught backend, distributed systems, and embedded engineer with 2+ years of production experience. Single-handedly built and operated a \textbf{50-node Raspberry Pi scraping cluster} powering kalibre.ai -- \textbf{5.3M+ records, 99.9\% uptime over 18+ months, \$24K+ cost savings}, kept undetected for 2+ years; recognized with \textbf{500K+ views and 1,500+ shares} across \href{https://www.reddit.com/r/selfhosted/comments/1rsflyj/fully_selfhosted_distributed_scraping/}{Reddit (r/selfhosted}, \href{https://www.reddit.com/r/webscraping/comments/1rqsvgp/python_selenium_at_scale_50_nodes_39m_records/}{r/webscraping)}. Delivered production IoT backend infrastructure for \textbf{Apple App Store and Google Play Store} applications. Built a live full-stack \textbf{GPS/LoRa asset tracking platform} and an \textbf{ESP32 embedded measurement system} (C, ESP-IDF, FreeRTOS) with a complete computer vision pipeline running on constrained hardware. Thrives owning entire systems -- from architecture to production -- with minimal supervision.
+}
+
+%-------------- TECHNICAL SKILLS ----------
+\section{Technical Skills}
+
+\resumeListStart
+  \item[] \textbf{Languages:} Python, JavaScript, C, SQL, Bash
+  \item[] \textbf{Backend and APIs:} Django, Django REST Framework, FastAPI, RESTful APIs, JWT Authentication
+  \item[] \textbf{Databases:} PostgreSQL, Supabase, Redis, Query Optimization, Database Design
+  \item[] \textbf{Infrastructure and DevOps:} Docker, Linux Server Administration, Nginx, AWS (S3, Lambda), Distributed Systems, Raspberry Pi Clusters, VPN
+  \item[] \textbf{Data Engineering:} Web Scraping (Selenium, BeautifulSoup, Scrapy), Chrome DevTools Protocol (CDP), spaCy, ETL Pipelines, Anti-detection
+  \item[] \textbf{Embedded and IoT:} ESP32, ESP-IDF v5.5, FreeRTOS, C Firmware, MQTT Broker, IoT Architecture, Event-driven Architecture, Edge Computing
+  \item[] \textbf{AI and Machine Learning:} Computer Vision, YOLO Object Detection, Edge AI (Hailo-8, 13 TOPS), LLM Integration
+  \item[] \textbf{Frontend:} React, Tailwind CSS, Mapbox GL, Component-based UI Development
+\resumeListEnd
+
+%-------------- WORK EXPERIENCE -----------
+\section{Work Experience}
+
+\resumeListStart
+
+  \resumeRole
+    {BiggWorks (Vithamas Technologies Pvt Ltd)}{Feb 2024 -- Present}
+    {Full Stack Engineer / Data Infrastructure Engineer}{Mysore, India}
+  \bulletListStart
+    \resumeItem{Single-handedly owned 4 production systems end-to-end across distributed data infrastructure, IoT, embedded, and full-stack web: \textbf{50-node self-hosted scraping cluster} (5.3M+ records, 99.9\% uptime, \$24K+ savings), IoT platform live on App Stores, ESP32 measurement system under \textbf{India Post} evaluation, and GPS tracking platform live in production}
+    \resumeItem{Infrastructure recognized with \textbf{500K+ views and 1,500+ shares} across \href{https://www.reddit.com/r/selfhosted/comments/1rsflyj/fully_selfhosted_distributed_scraping/}{Reddit (r/selfhosted}, \href{https://www.reddit.com/r/webscraping/comments/1rqsvgp/python_selenium_at_scale_50_nodes_39m_records/}{r/webscraping)}; \textbf{75\% cost reduction} (\$68/month vs. \$1,760/month AWS equivalent); \textbf{undetected for 2+ years} at 50-node scale; \textbf{95\% reduction in manual intervention} through automated self-healing}
+  \bulletListEnd
+
+  \vspace{2pt}
+  {\small\textit{Key Projects:}}
+  \vspace{2pt}
+
+  \projectEntry{Kalibre.ai -- Production Distributed Data Platform (End-to-End Ownership)}{\href{https://kalibre.ai}{kalibre.ai}}
+  \bulletListStart
+    \resumeItem{\textbf{Anti-detection}: chose physical RPi nodes over containers -- each Pi has genuinely distinct GPU info, WebGL renderer, canvas fingerprint, and hardware clock (containers share identical underlying signals regardless of network isolation); \textbf{dedicated VPN per node} with auto IP self-assignment on boot, \textbf{CDP-level user-agent override} (Network.setUserAgentOverride), navigator.webdriver spoofing, XPath by text content (survived multiple full site redesigns) -- \textbf{undetected for 2+ years}}
+    \resumeItem{\textbf{DB-as-coordinator}: job unique IDs as primary keys eliminate duplicates across 50 nodes with zero central queue; \textbf{Supabase boolean-flip cycle management} ensures each target is processed by exactly one node per cycle; self-hosted on Synology NAS; scaled 1M+ $\rightarrow$ \textbf{5.3M+ continuously refreshed records} (\$30,462 cumulative savings); \textbf{LLM parsing pipeline} (Mistral AI agent + GPT-4o-mini + DeepSeek) classifies scraped jobs into roles, extracts experience, skills, and work type from raw HTML; spaCy entity ruler for skill normalization}
+    \resumeItem{\textbf{Resilience}: HTTP 429 auto-retry (5 attempts), 3-tier modal dismissal (button $\rightarrow$ ESC $\rightarrow$ JS CSS force-hide), new-tab isolation per job, IoT smart power strip auto power-cycles crashed nodes; \textbf{dedicated expiry-checker nodes} flag stale listings (\textbf{3,700+ checks/day}); custom real-time dashboard with per-node health indicators}
+    \resumeItem{\textbf{Tech:} Python, Selenium, CDP, BeautifulSoup, Scrapy, spaCy, Mistral AI, OpenAI, DeepSeek, PostgreSQL, Supabase, Docker, Nginx, Raspberry Pi, VPN}
+  \bulletListEnd
+
+  \projectEntry{BlueTechFins -- IoT Water Quality Monitoring Platform}{\href{https://bluetechfins.com/}{bluetechfins.com} -- iOS / Android / Web}
+  \bulletListStart
+    \resumeItem{Built complete Django/DRF backend with \textbf{MQTT broker} for real-time sensor ingestion from globally distributed IoT devices -- \textbf{10K+ daily requests, sub-100ms response times}; live on \textbf{Apple App Store and Google Play Store}; platform demonstrated and recognised at \textbf{ICAR Goa} (India's apex agricultural research body)}
+    \resumeItem{\textbf{Tech:} Django, Django REST Framework, MQTT, PostgreSQL, AWS, REST APIs}
+  \bulletListEnd
+
+  \projectEntry{4D Scale -- Automated Parcel Measurement System (End-to-End Ownership)}{India Post -- 25K units under evaluation}
+  \bulletListStart
+    \resumeItem{Single-handedly built dual-microcontroller system (hardware, firmware, CV pipeline, backend, dashboard, calibration tooling); demonstrated to \textbf{India Post} (150,000+ post offices) -- \textbf{25,000-unit deployment under evaluation}; captures L/W/H/Weight simultaneously with sub-mm precision}
+    \resumeItem{Full \textbf{CV pipeline} on constrained hardware: Sobel $\rightarrow$ dilation $\rightarrow$ Moore contour $\rightarrow$ Graham hull $\rightarrow$ rotating calipers min-area rect; ultrasonic height with perspective-correction scaling; load cell with 5-sample median filtering; \textbf{ESP-IDF v5.5/FreeRTOS} firmware + \textbf{Flask} backend with server-side calibration API (zero reflash)}
+    \resumeItem{\textbf{Tech:} ESP32, ESP-IDF v5.5, FreeRTOS, C, OpenCV, Flask, Python, HTML/JS}
+  \bulletListEnd
+
+  \projectEntry{AI Footfall Counter -- Overhead People Counting System}{Hailo-8 NPU, 13 TOPS}
+  \bulletListStart
+    \resumeItem{Full edge inference pipeline on Raspberry Pi + \textbf{Hailo-8 NPU}: \textbf{DamoYOLO} overhead head detection (640×640, int8-quantized) $\rightarrow$ \textbf{ByteTracker} with Kalman filtering for multi-person tracking $\rightarrow$ IN/OUT zone-crossing detection with trajectory analysis -- \textbf{$\sim$20 FPS} on constrained hardware, no cloud dependency}
+    \resumeItem{Django API integration pushing per-device IN/OUT/passerby counts with 7-day local persistence; optional gender classification and RTMP live streaming via FFmpeg; real-time diagnostics monitor with per-frame stats}
+    \resumeItem{\textbf{Tech:} Python, DeGirum, DamoYOLO, ByteTracker, OpenCV, Picamera2, Raspberry Pi, Hailo-8}
+  \bulletListEnd
+
+  \projectEntry{saTag -- Real-time GPS/LoRa Asset Tracking Platform}{\href{https://tracker.sattags.com}{tracker.sattags.com} -- Live}
+  \bulletListStart
+    \resumeItem{\textbf{Django 5/DRF} backend with \textbf{16 REST API endpoints}, JWT auth, Dockerized with Nginx on AWS; 3-model PostgreSQL schema with \textbf{5+ composite indexes}; \textbf{Hubble Network API failover caching} + Mapbox reverse geocoding (3-attempt retry)}
+    \resumeItem{\textbf{React 19 + TypeScript} frontend with \textbf{Mapbox GL} GeoJSON trails; antimeridian crossing correction for global tracking; 4-layer filtering pipeline (Haversine stop detection, hourly aggregation, distance dedup, combined)}
+    \resumeItem{\textbf{Tech:} Django 5, DRF, SimpleJWT, PostgreSQL 15, Docker, Nginx, React 19, TypeScript, Mapbox GL, AWS}
+  \bulletListEnd
+
+  \resumeRole
+    {CarDekho}{Dec 2021 -- Oct 2022}
+    {Inspection Engineer}{Bangalore, India}
+  \bulletListStart
+    \resumeItem{Conducted quality assessments of 90+ vehicles monthly and established data-driven inspection workflows}
+  \bulletListEnd
+
+  \resumeRole
+    {Cars24 Pvt Ltd}{Nov 2019 -- Dec 2021}
+    {Evaluation Engineer (B2B)}{Bangalore, India}
+  \bulletListStart
+    \resumeItem{Led quality assurance operations evaluating 90+ vehicles monthly, pioneering data-driven inspection methodologies}
+  \bulletListEnd
+
+  \resumeRole
+    {DM Agri Equipments}{Jul 2016 -- Oct 2019}
+    {Operations Lead}{Kodagu, India}
+  \bulletListStart
+    \resumeItem{Managed family agricultural equipment dealership; developed business operations, vendor management, and process optimization skills}
+  \bulletListEnd
+
+\resumeListEnd
+
+%-------------- EDUCATION -----------------
+\section{Education}
+
+\resumeListStart
+  \resumeRole
+    {Visvesvaraya Technological University (VTU)}{2012 -- 2016}
+    {B.E. Mechanical Engineering (3 years completed)}{}
+  \bulletListStart
+    \resumeItem{Transitioned to family business operations after third year; subsequently became a self-taught software engineer building production-grade distributed systems from the ground up}
+  \bulletListEnd
+\resumeListEnd
+
+%-------------- ADDITIONAL INFORMATION ----
+\section{Additional Information}
+
+\resumeListStart
+  \item[]\textbf{Spoken Languages:} English (Professional), Kannada (Native), German (Basic), Japanese (Basic), Hindi / Tamil / Malayalam (Conversational)
+\resumeListEnd
+
+%------------------------------------------
+\end{document}
