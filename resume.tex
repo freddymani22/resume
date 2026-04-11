@@ -90,7 +90,7 @@
 \section{Professional Summary}
 
 \small{
-Self-taught backend, distributed systems, and embedded engineer with 2+ years of production experience. Single-handedly built and operated a \textbf{50-node Raspberry Pi scraping cluster} powering kalibre.ai -- \textbf{5.3M+ records, 99.9\% uptime over 18+ months, \$24K+ cost savings}, kept undetected for 2+ years; recognized with \textbf{500K+ views and 1,500+ shares} across \href{https://www.reddit.com/r/selfhosted/comments/1rsflyj/fully_selfhosted_distributed_scraping/}{Reddit (r/selfhosted}, \href{https://www.reddit.com/r/webscraping/comments/1rqsvgp/python_selenium_at_scale_50_nodes_39m_records/}{r/webscraping)}. Delivered production IoT backend infrastructure for \textbf{Apple App Store and Google Play Store} applications. Built a live full-stack \textbf{GPS/LoRa asset tracking platform} and an \textbf{ESP32 embedded measurement system} (C, ESP-IDF, FreeRTOS) with a complete computer vision pipeline running on constrained hardware. Thrives owning entire systems -- from architecture to production -- with minimal supervision.
+Self-taught backend, distributed systems, and embedded engineer with 2+ years of production experience. Single-handedly built and operated a \textbf{50-node Raspberry Pi scraping cluster} powering Kalibre -- \textbf{5.3M+ records, 99.9\% uptime over 18+ months, \$24K+ cost savings}, kept undetected for 2+ years; recognized with \textbf{500K+ views and 1,500+ shares} across \href{https://www.reddit.com/r/selfhosted/comments/1rsflyj/fully_selfhosted_distributed_scraping/}{Reddit (r/selfhosted}, \href{https://www.reddit.com/r/webscraping/comments/1rqsvgp/python_selenium_at_scale_50_nodes_39m_records/}{r/webscraping)}. Delivered production IoT backend infrastructure for \textbf{Apple App Store and Google Play Store} applications. Built a live full-stack \textbf{GPS/LoRa asset tracking platform} and an \textbf{ESP32 embedded measurement system} (C, ESP-IDF, FreeRTOS) with a complete computer vision pipeline running on constrained hardware. Thrives owning entire systems -- from architecture to production -- with minimal supervision.
 }
 
 %-------------- TECHNICAL SKILLS ----------
@@ -125,7 +125,7 @@ Self-taught backend, distributed systems, and embedded engineer with 2+ years of
   {\small\textit{Key Projects:}}
   \vspace{2pt}
 
-  \projectEntry{Kalibre.ai -- Production Distributed Data Platform (End-to-End Ownership)}{\href{https://kalibre.ai}{kalibre.ai}}
+  \projectEntry{Kalibre -- Production Distributed Data Platform (End-to-End Ownership)}{}
   \bulletListStart
     \resumeItem{\textbf{Anti-detection}: chose physical RPi nodes over containers -- each Pi has genuinely distinct GPU info, WebGL renderer, canvas fingerprint, and hardware clock (containers share identical underlying signals regardless of network isolation); \textbf{dedicated VPN per node} with auto IP self-assignment on boot, \textbf{CDP-level user-agent override} (Network.setUserAgentOverride), navigator.webdriver spoofing, XPath by text content (survived multiple full site redesigns) -- \textbf{undetected for 2+ years}}
     \resumeItem{\textbf{DB-as-coordinator}: job unique IDs as primary keys eliminate duplicates across 50 nodes with zero central queue; \textbf{Supabase boolean-flip cycle management} ensures each target is processed by exactly one node per cycle; self-hosted on Synology NAS; scaled 1M+ $\rightarrow$ \textbf{5.3M+ continuously refreshed records} (\$30,462 cumulative savings)}
