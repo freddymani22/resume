@@ -97,14 +97,14 @@ Self-taught backend, scraping, and systems engineer with 2+ years of production 
 \section{Technical Skills}
 
 \resumeListStart
-  \item[] \textbf{Languages:} Python, JavaScript, TypeScript, C, SQL, Bash
-  \item[] \textbf{Backend and APIs:} Django, Django REST Framework, FastAPI, Flask, RESTful APIs, JWT Authentication, SimpleJWT, n8n
+  \item[] \textbf{Languages:} Python, JavaScript, SQL, Bash
+  \item[] \textbf{Backend and APIs:} Django, Django REST Framework, FastAPI, RESTful APIs, JWT Authentication, SimpleJWT, n8n
   \item[] \textbf{Databases:} PostgreSQL, Supabase, Redis, Query Optimization, Database Design
-  \item[] \textbf{Infrastructure and DevOps:} Docker, Linux Server Administration, Nginx, AWS (S3, Lambda), Distributed Systems, Raspberry Pi Clusters, VPN
+  \item[] \textbf{Infrastructure and DevOps:} Docker, Linux Server Administration, Nginx, AWS (EC2, S3, Lambda), Distributed Systems, Raspberry Pi Clusters, VPN
   \item[] \textbf{Web Scraping and Data Pipelines:} Selenium, BeautifulSoup, Browser Automation, HTML Parsing, Data Extraction, XPath, ETL Pipelines, webdriver-manager, Anti-detection, User-agent Rotation, Session Handling, Browser Fingerprint Spoofing
-  \item[] \textbf{Embedded and IoT:} ESP32, ESP-IDF v5.5, FreeRTOS, C Firmware, MQTT Broker, BLE, Hubble Network, Picamera2, IoT Architecture, Event-driven Architecture, Edge Computing
+  \item[] \textbf{Embedded and IoT:} MQTT Broker, BLE, Hubble Network, Picamera2, IoT Architecture, Event-driven Architecture, Edge Computing
   \item[] \textbf{AI and Machine Learning:} Computer Vision, OpenCV, LLM APIs, Mistral AI, YOLO Object Detection, DamoYOLO, ByteTracker, DeGirum, Edge AI (Hailo-8, 13 TOPS), LLM Integration
-  \item[] \textbf{Frontend:} React, Tailwind CSS, Mapbox GL, HTML, Component-based UI Development
+  \item[] \textbf{Frontend:} React, Tailwind CSS, Mapbox GL, Component-based UI Development
 \resumeListEnd
 
 %-------------- WORK EXPERIENCE -----------
@@ -113,10 +113,19 @@ Self-taught backend, scraping, and systems engineer with 2+ years of production 
 \resumeListStart
 
   \resumeRole
+    {Blue Orbit (Freelance -- US/Japan Client)}{Mar 2026 -- Present}
+    {Freelance Software Engineer}{Remote -- \href{https://tracker.blueorbit.com}{tracker.blueorbit.com}}
+  \bulletListStart
+    \resumeItem{Sole software engineer for a live \textbf{BLE + Hubble Network asset tracking platform} built for a \textbf{US and Japan-based client}, owning the full stack end-to-end -- backend, frontend, and \textbf{AWS EC2} deployment}
+    \resumeItem{Built the Django/DRF \textbf{backend} with secure APIs, JWT auth, optimized data storage for tracking workloads, and OTA update delivery via \textbf{Amazon S3}, plus the React \textbf{frontend} mapping experience for live asset tracking, trip history, and filtered route visualization}
+    \resumeItem{\textbf{Tech:} Django 5, DRF, SimpleJWT, PostgreSQL 15, Docker, Nginx, React 19, Mapbox GL, AWS EC2, BLE, Hubble Network}
+  \bulletListEnd
+
+  \resumeRole
     {BiggWorks (Vithamas Technologies Pvt Ltd)}{Feb 2024 -- Mar 2026}
     {Full Stack Engineer / Data Infrastructure Engineer}{Mysore, India}
   \bulletListStart
-    \resumeItem{Single-handedly owned a \textbf{50-node self-hosted scraping platform} end-to-end, while also delivering production backend systems across IoT, embedded, and asset tracking products}
+    \resumeItem{Single-handedly owned a \textbf{50-node self-hosted scraping platform} end-to-end, while also delivering production backend systems across IoT and embedded products}
     \resumeItem{\textbf{75\% cost reduction} (\$235/month vs. \$941/month AWS equivalent); \textbf{5.3M+ records}, \textbf{99.9\% uptime}, \textbf{undetected for 2+ years} at 50-node scale, and \textbf{95\% reduction in manual intervention} through automated self-healing}
     \resumeItem{Infrastructure recognized with \textbf{500K+ views and 1,500+ shares} across \href{https://www.reddit.com/r/selfhosted/comments/1rsflyj/fully_selfhosted_distributed_scraping/}{Reddit (r/selfhosted}, \href{https://www.reddit.com/r/webscraping/comments/1rqsvgp/python_selenium_at_scale_50_nodes_39m_records/}{r/webscraping)}}
   \bulletListEnd
@@ -140,27 +149,12 @@ Self-taught backend, scraping, and systems engineer with 2+ years of production 
     \resumeItem{\textbf{Tech:} Django, Django REST Framework, MQTT, PostgreSQL, AWS, REST APIs}
   \bulletListEnd
 
-  \projectEntry{4D Scale -- Automated Parcel Measurement System (End-to-End Ownership)}{India Post -- 25K units under evaluation}
-  \bulletListStart
-    \resumeItem{Single-handedly built the full system across hardware, firmware, backend services, dashboarding, and calibration tools}
-    \resumeItem{Demonstrated to \textbf{India Post} (150,000+ post offices) with a potential \textbf{25,000-unit deployment} under evaluation}
-    \resumeItem{Delivered a measurement platform that captures parcel dimensions and weight simultaneously with high accuracy on constrained embedded hardware}
-    \resumeItem{\textbf{Tech:} ESP32, ESP-IDF v5.5, FreeRTOS, C, OpenCV, Flask, Python, HTML/JS}
-  \bulletListEnd
-
   \projectEntry{AI Footfall Counter -- Overhead People Counting System}{Hailo-8 NPU, 13 TOPS}
   \bulletListStart
     \resumeItem{Built an edge-based people counting system on Raspberry Pi + \textbf{Hailo-8 NPU} that tracked entries and exits in real time at \textbf{$\sim$20 FPS} without cloud dependency}
     \resumeItem{Integrated a Django API to push per-device IN/OUT/passerby counts with 7-day local persistence}
     \resumeItem{Optional gender classification and RTMP live streaming via FFmpeg; real-time diagnostics monitor with per-frame stats}
     \resumeItem{\textbf{Tech:} Python, DeGirum, DamoYOLO, ByteTracker, OpenCV, Picamera2, Raspberry Pi, Hailo-8}
-  \bulletListEnd
-
-  \projectEntry{satTags -- Real-time BLE + Hubble Network Asset Tracking Platform}{\href{https://tracker.sattags.com}{tracker.sattags.com} -- Live}
-  \bulletListStart
-    \resumeItem{Collaborated with the IoT team to build the backend for a live \textbf{BLE + Hubble Network asset tracking platform} with secure APIs, \textbf{cloud deployment}, optimized data storage, and OTA update delivery via \textbf{Amazon S3}}
-    \resumeItem{Built the frontend mapping experience for live \textbf{asset tracking}, trip history, and filtered route visualization for production use}
-    \resumeItem{\textbf{Tech:} Django 5, DRF, SimpleJWT, PostgreSQL 15, Docker, Nginx, React 19, TypeScript, Mapbox GL, AWS, BLE, Hubble Network}
   \bulletListEnd
 
   \resumeRole
